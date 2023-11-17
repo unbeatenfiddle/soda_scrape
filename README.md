@@ -10,7 +10,7 @@ This project consists of two main components: the "Soda Data Scraper" and the "S
 ## Requirements
 - Python 3.x
 - `requests` and `BeautifulSoup` libraries for the scraper.
-- `pandas`, 'numpy', and `matplotlib` libraries for the analyzer.
+- `pandas`, `numpy`, and `matplotlib` libraries for the analyzer.
 - Internet connection.
 
 ## Installation
@@ -41,21 +41,11 @@ This project consists of two main components: the "Soda Data Scraper" and the "S
 ## Configuration
 - **Scraper Script**:
   - `num_pages_to_scrape`: Number of pages to scrape.
-  - `int_soda_id`: Initial soda ID for scraping.
+  - `int_soda_id`: Initial soda ID for scraping. Safeway.com uses a sequential system for numbers their sodas. By default this value is set to the lowest number that represents a soda that I could find.
 - **Analyzer Script**:
   - Modify the `plt.rcParams` and `colors` variables to change the visual appearance of the bar chart.
 
 ## Notes
 - The scraper is configured for Safeway's website structure as of the latest update. Changes to the website may require script modifications.
-- Use the scraper responsibly to avoid server overload or potential IP blocking.
+- Use the scraper responsibly to avoid server overload or potential IP blocking. The scraper does contain random sleep periods to protect the service from automatic server blocking.
 - The analyzer script assumes the data format provided by the scraper. Changes in the scraper's output format may require updates in the analyzer.
-
-## License
-[Specify the license here, if applicable]
-
-## Contact
-[Your Contact Information]
-
----
-
-This README now includes details about both the Soda Data Scraper and the Soda Data Analyzer, providing a complete guide for users to understand, install, and use both components of the project. Modify as needed to suit your project's specifics or additional features.
