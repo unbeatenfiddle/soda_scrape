@@ -10,7 +10,7 @@ This project consists of two main components: the "Soda Data Scraper" and the "S
 ## Requirements
 - Python 3.x
 - `requests` and `BeautifulSoup` libraries for the scraper.
-- `pandas` and `matplotlib` libraries for the analyzer.
+- `pandas`, 'numpy', and `matplotlib` libraries for the analyzer.
 - Internet connection.
 
 ## Installation
