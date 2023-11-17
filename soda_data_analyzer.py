@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Load the data
-data = pd.read_csv('soda_data.csv')
+data = pd.read_csv('final_soda_ingredients.csv')
 data = data.drop(columns=['Ingredient'])
 
 
@@ -13,7 +13,7 @@ data = data.drop(columns=['Ingredient'])
 all_ingredients = data.filter(like='Ingredient').values.flatten()
 cleaned_ingredients = [ingredient for ingredient in all_ingredients if pd.notna(ingredient)]
 ingredient_counts = pd.Series(cleaned_ingredients).value_counts()
-most_common_ingredients = ingredient_counts.head(12)
+most_common_ingredients = ingredient_counts.head(20)
 
 # Font Setup
 plt.rcParams.update({
@@ -30,7 +30,7 @@ colors = plt.get_cmap('tab10')(np.linspace(0, 1, 10))
 # Bar Chart
 plt.figure(figsize=(11, 7), facecolor='#faf3e0')
 most_common_ingredients.plot(kind='bar', color=colors)
-plt.title('Top 12 most common ingredients across 65 American soda products', fontweight= 'bold', style = 'normal')
+plt.title('Most common ingredients across 600 American soda products', fontweight= 'bold', style = 'normal')
 plt.xlabel('Ingredients', fontsize = 12, style ='normal')
 plt.ylabel('Number of occurrences', fontsize = 12, style='normal')
 plt.xticks(rotation=45, ha='right')
